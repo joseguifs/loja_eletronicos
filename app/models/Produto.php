@@ -40,4 +40,14 @@ class Produto {
         $stmt->execute([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function create($nome, $descricao, $preco, $imagem_url, $categoria_id, $marca_id)
+    {
+        $stmt = $this->conn->prepare("
+            INSERT INTO produtos (nome, descricao, preco, imagem_url, categoria_id, marca_id)
+            VALUES (?, ?, ?, ?, ?, ?)
+        ");
+
+        $stmt->execute([$nome, $descricao, $preco, $imagem_url, $categoria_id, $marca_id]);
+    }
 }
