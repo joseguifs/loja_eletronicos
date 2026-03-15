@@ -1,0 +1,127 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    padding: 40px;
+}
+
+/* Títulos */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botões */
+a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Botão visualizar */
+.btn-view {
+    background-color: #3498db;
+    color: white;
+}
+
+
+/* Botão editar */
+.btn-edit {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Botão excluir */
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Botão criar */
+.btn-create {
+    background-color: #2ecc71;
+    color: white;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Formulários */
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botão submit */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2ecc71;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.actions {
+    margin-top: 30px !important;
+}
+
+.actions a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.btn-back {
+    color: #6c2eb9;
+    font-weight: bold;
+}
