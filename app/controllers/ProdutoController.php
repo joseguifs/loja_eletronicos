@@ -157,3 +157,25 @@ class ProdutoController {
         exit;
     }
 
+    public function delete()
+    {
+        global $pdo;
+
+        $produto = new Produto($pdo);
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = $_POST['id'];
+
+            $produto->delete($id);
+
+            header("Location: ?action=produtos");
+            exit;
+        }
+
+        $id = $_GET['id'];
+        $prod = $produto->find($id);
+
+        require __DIR__ . "/../views/produtos/delete.php";
+    }
+}
+
