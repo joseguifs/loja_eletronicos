@@ -1,0 +1,26 @@
+<?php
+
+class Produto {
+
+    private $conn;
+
+    public function __construct($pdo)
+    {
+        $this->conn = $pdo;
+    }
+
+    public function all()
+    {
+        $stmt = $this->conn->query("
+            SELECT 
+                produtos.*,
+                categorias.nome AS categoria_nome,
+                marcas.nome AS marca_nome
+            FROM produtos
+            LEFT JOIN categorias ON produtos.categoria_id = categorias.id
+            LEFT JOIN marcas ON produtos.marca_id = marcas.id
+        ");
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+}
