@@ -50,4 +50,15 @@ class Produto {
 
         $stmt->execute([$nome, $descricao, $preco, $imagem_url, $categoria_id, $marca_id]);
     }
+
+    public function update($id, $nome, $descricao, $preco, $imagem_url, $categoria_id, $marca_id)
+    {
+        $stmt = $this->conn->prepare("
+            UPDATE produtos
+            SET nome = ?, descricao = ?, preco = ?, imagem_url = ?, categoria_id = ?, marca_id = ?
+            WHERE id = ?
+        ");
+
+        $stmt->execute([$nome, $descricao, $preco, $imagem_url, $categoria_id, $marca_id, $id]);
+    }
 }
