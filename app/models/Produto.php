@@ -61,4 +61,10 @@ class Produto {
 
         $stmt->execute([$nome, $descricao, $preco, $imagem_url, $categoria_id, $marca_id, $id]);
     }
+
+    public function delete($id)
+    {
+        $stmt = $this->conn->prepare("DELETE FROM produtos WHERE id = ?");
+        $stmt->execute([$id]);
+    }
 }
