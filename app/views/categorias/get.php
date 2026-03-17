@@ -9,7 +9,7 @@
 
         <link rel="stylesheet" href="/loja_eletronicos/app/css/style.css">
 
-        <title>Document</title>
+        <title>Get</title>
 
     </head>
     
@@ -32,5 +32,5 @@
         </div>
 
     </body>
-    
+
 </html>

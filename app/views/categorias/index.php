@@ -14,23 +14,43 @@
     </head>
 
     <body>
-    
+        
         <div class="container">
 
-            <h1>Detalhes da Categoria</h1>
+            <h1>Lista de Categorias</h1>
 
-            <p><strong>ID:</strong> <?= $cat['id'] ?></p>
+            <a class="btn-create" href="?action=categoria_create">Nova Categoria</a>
 
-            <p><strong>Nome:</strong> <?= $cat['nome'] ?></p>
+            <table>
 
-            <br>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ações</th>
+                </tr>
 
-            <button type="button" onclick="window.location.href='?action=categorias'">
-                Voltar
-            </button>
+                <?php foreach($categorias as $c): ?>
+
+                    <tr>
+                        <td><?= $c['nome'] ?></td>
+
+                        <td>
+
+                            <a class="btn-view" href="?action=categoria_find&id=<?= $c['id'] ?>">Ver</a>
+
+                            <a class="btn-edit" href="?action=categoria_edit&id=<?= $c['id'] ?>">Editar</a>
+
+                            <a class="btn-delete" href="?action=categoria_delete&id=<?= $c['id'] ?>">Excluir</a>
+
+                        </td>
+
+                    </tr>
+
+                <?php endforeach; ?>
+
+            </table>
 
         </div>
-        
+
     </body>
 
 </html>
