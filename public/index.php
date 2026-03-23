@@ -6,10 +6,6 @@ require_once __DIR__ . "/../app/controllers/ProdutoController.php";
 
 $action = $_GET['action'] ?? 'produtos';
 
-$controller = new MarcaController();
-
-$action = $_GET['action'] ?? 'produtos';
-
 switch ($action) {
     case 'categorias':
         $controller = new CategoriaController();
