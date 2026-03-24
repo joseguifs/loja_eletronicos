@@ -111,4 +111,4 @@ switch ($action) {
         $controller = new ProdutoController();
         $controller->delete();
         break;
-}
+} 
