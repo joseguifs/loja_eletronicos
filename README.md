@@ -2,7 +2,7 @@
 
 Projeto desenvolvido para a disciplina de **Engenharia de Software** ministrada por **Edeilson Milhomem da Silva** na **UFT (Universidade Federal do Tocantins)** em **2026.1**
 
-## .📌 Descrição
+## 📌 Descrição
 
 Este projeto consiste em um sistema web de uma loja de eletrônicos, com funcionalidades voltadas para gerenciamento de produtos.
 ## 🚀 Tecnologias Utilizadas
