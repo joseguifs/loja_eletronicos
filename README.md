@@ -50,21 +50,16 @@ CREATE TABLE produtos (
     categoria_id INT(11) DEFAULT NULL,
     marca_id INT(11) DEFAULT NULL,
     created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-    
     PRIMARY KEY (id),
-
     KEY fk_produto_categoria (categoria_id),
     KEY fk_produtos_marcas (marca_id),
-
     CONSTRAINT fk_produto_categoria 
         FOREIGN KEY (categoria_id) 
         REFERENCES categorias(id),
-
     CONSTRAINT fk_produtos_marcas 
         FOREIGN KEY (marca_id) 
         REFERENCES marcas(id)
         ON DELETE SET NULL
-
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; 
 
 ## ⚙️ Como Executar o Projeto
