@@ -33,13 +33,11 @@ CREATE TABLE marcas (
     PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
 CREATE TABLE categorias (
     id INT(11) NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
 CREATE TABLE produtos (
     id INT(11) NOT NULL AUTO_INCREMENT,
@@ -53,11 +51,12 @@ CREATE TABLE produtos (
     PRIMARY KEY (id),
     KEY fk_produto_categoria (categoria_id),
     KEY fk_produtos_marcas (marca_id),
-    CONSTRAINT fk_produto_categoria 
-        FOREIGN KEY (categoria_id) 
-        REFERENCES categorias(id),
-    CONSTRAINT fk_produtos_marcas 
-        FOREIGN KEY (marca_id) 
+    CONSTRAINT fk_produto_categoria
+        FOREIGN KEY (categoria_id)
+        REFERENCES categorias(id)
+        ON DELETE SET NULL,
+    CONSTRAINT fk_produtos_marcas
+        FOREIGN KEY (marca_id)
         REFERENCES marcas(id)
         ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; 
