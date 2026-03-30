@@ -23,6 +23,9 @@ Este projeto consiste em um sistema web de uma loja de eletrônicos, com funcion
 
 ## 🗄️ Banco de Dados
 
+Baixe o banco de dados MariaDB nesse link **https://mariadb.com/docs/release-notes/latest-releases**
+
+
 Execute o script abaixo no MySQL/MariaDB (via phpMyAdmin ou terminal):
 
 CREATE DATABASE IF NOT EXISTS loja_eletronicos;
@@ -67,7 +70,8 @@ CREATE TABLE produtos (
 
 1. Instale o **XAMPP** em sua máquina  
 2. Inicie os serviços **Apache** 
-3. Instale o banco de dados MariaDB e execute o script SQL. 
-4. Clone este repositório:
+3. Instale o banco de dados MariaDB e execute o script SQL.
+4. preencha o password database.php com a mesma senha do user root do MariaDB
+5. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/loja_eletronicos.git
